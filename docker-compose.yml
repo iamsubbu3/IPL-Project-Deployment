@@ -1,7 +1,9 @@
 version: '3.8'
 services:
-  nodejs:
+  IPL-app:
     build: .
+    image: ipl-app:v1.0.0
+    container_name: IPL-app
     ports:
       - '3000:3000'
     depends_on:
@@ -13,5 +15,6 @@ services:
     #   - .:/usr/src/app
   mongodb:
     image: mongo:latest
+    container_name: mongodb
     ports:
       - '27017:27017'
